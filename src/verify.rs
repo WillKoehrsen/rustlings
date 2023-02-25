@@ -20,7 +20,7 @@ pub fn verify<'a>(
         .progress_chars("#>-")
     );
     bar.set_position(num_done as u64);
-    bar.set_message(format!("({:.1} %)", 0.));
+    bar.set_message(format!("({:.1} %)", num_done));
 
     for exercise in exercises {
         let compile_result = match exercise.mode {
